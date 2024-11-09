@@ -16,3 +16,5 @@ CAD Flow: The sequence of steps in designing ICs, including synthesis (creation 
 Tools and Algorithms: The course aims to explain critical algorithms, data structures, and modeling assumptions used in CAD flow.
 
 This introductory part sets the stage for learning about the design tools and methodologies used in VLSI, particularly for students interested in the technical aspects of chip design and automation.
+
+Part 1 introduces Boolean algebra for computational purposes, logic verification, and two-level and multi-level logic synthesis. 
