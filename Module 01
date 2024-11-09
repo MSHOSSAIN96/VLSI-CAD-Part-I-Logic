@@ -2,6 +2,7 @@
 Recognize how a "CAD flow" of tools gradually refines designs from abstract to concrete representations; synthesis tools add detail, and verification tools ensure that synthesis procedures are valid.  
 **Module 01: **
 **Welcome and Introduction**
+
 ![Screenshot 2024-11-09 152147](https://github.com/user-attachments/assets/7773e735-7b64-4cb8-871a-42e52861b5b1)
 
 **Definitions and Terminology:**
@@ -40,3 +41,4 @@ Boolean Verification: Methods like BDDs (Binary Decision Diagrams) and SAT (Sati
 Two-Level Logic Synthesis: Synthesis for simple AND/OR logical structures.
 
 Multi-Level Logic Synthesis: Synthesis for more complex, industrial-strength logic designs.
+
