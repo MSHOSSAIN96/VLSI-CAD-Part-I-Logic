@@ -229,6 +229,39 @@ Summary
 
 This tutorial offers an in-depth guide on using ESPRESSO for Boolean logic minimization, providing examples, syntax, and options for optimizing both simple and complex logic functions in digital circuit design.
 
+[sis-tutorial.pdf](https://github.com/user-attachments/files/17692050/sis-tutorial.pdf)
+
+This document is a tutorial on using the SIS (Sequential Interactive Synthesis) software package, a tool for multi-level logic optimization in VLSI (Very-Large-Scale Integration) CAD (Computer-Aided Design). SIS, developed at the University of California, Berkeley, is an advanced tool for optimizing Boolean networks—models of logic circuits used in VLSI design.
+
+Key Components of the Document:
+Introduction to SIS:
+
+SIS is an extended version of the earlier MIS tool and is designed to help optimize multi-level logic. It automates Boolean logic network optimization, using heuristic scripts to refine circuit designs.
+The tutorial uses the RUGGED script, a standard optimization method, to simplify Boolean networks.
+
+Input and Output Formats:
+
+SIS can read files in various formats, including the PLA (Programmable Logic Array) format used by the ESPRESSO tool, which defines Boolean functions in a truth table format. This compatibility allows users to edit PLA files and optimize them within SIS.
+The optimized output is a Boolean network model, with nodes in the network represented in two-level Sum-of-Products (SOP) form.
+Example 1: Optimizing Boolean Functions:
+
+The document demonstrates a simple example with two Boolean functions (s0 and s1), each dependent on four input variables (a1, a0, b1, b0).
+After optimization in SIS, primary outputs are shown in braces (e.g., {s0}), and any intermediate nodes generated are shown in brackets (e.g., [2]). This example provides insights into reading the optimized network output.
+For complexity analysis, the tutorial explains how to count nodes, literals (variables in each expression), and AND gate product terms in the network.
+
+Example 2: 2-bit Multiplier:
+
+This example demonstrates a more complex Boolean network for a 2-bit multiplier. Inputs are two 2-bit numbers, and the output is a 4-bit product.
+Similar to the first example, the SIS output provides an optimized Boolean network, illustrating intermediate nodes and their connections.
+The tutorial highlights counting methods for complexity analysis (nodes, literals, AND gate terms) for this multiplier circuit.
+
+Boolean Network Diagrams:
+The tutorial shows how to visualize SIS-optimized networks as Boolean diagrams, where each node represents a logical operation, and connections show data flow between nodes.
+
+Purpose of SIS in VLSI Design:
+SIS is valuable for optimizing digital circuits by minimizing logic expressions, leading to more efficient VLSI designs. This tutorial provides a hands-on guide to using SIS for Boolean logic network optimization and reading output for analysis, helping users improve their designs for better performance, reduced size, and potentially lower power consumption.
+
+
 
 
 
