@@ -80,4 +80,31 @@ Two-Level Logic Synthesis: Simplified methods for designing basic AND/OR logical
 Multi-Level Logic Synthesis: More advanced synthesis techniques for creating complex, layered logic circuits required in industrial designs.
 Overall, this course provides a deep dive into the algorithms and structures behind the CAD tools that enable engineers to design the complex logic at the core of modern digital systems.
 
+[kbdd-tutorial.pdf](https://github.com/user-attachments/files/17691883/kbdd-tutorial.pdf)
+
+This document is a tutorial on using the kbdd software package, a BDD (Binary Decision Diagram) calculator, developed by Professor Randy Bryant’s group at Carnegie Mellon University. The tutorial is provided as part of the "VLSI CAD: Logic to Layout" course at the University of Illinois at Urbana-Champaign and serves as a hands-on guide for students to understand and apply Boolean function manipulation using BDDs.
+
+Key Highlights of the Tutorial
+Introduction to kbdd:
+
+kbdd offers a command-line interface to work with Boolean functions for VLSI CAD applications, particularly in logic verification and synthesis.
+It provides operators and commands to declare variables, evaluate Boolean expressions, and perform complex manipulations, making it suitable for tasks that would be difficult to handle manually.
+Basic Commands:
+
+Commands such as boolean to declare variables, eval to evaluate expressions, bdd to print BDD representations, and satisfy to find satisfying variable assignments are highlighted.
+The tutorial includes examples for each command and provides explanations for commands like adder for creating n-bit adders and mux for multiplexers.
+Example - Adder Circuit Repair:
+
+A practical example demonstrates how kbdd can be used to fix a one-bit adder circuit with an error (a NOR gate used instead of an OR gate). The process involves creating a correct BDD, defining an incorrect version, and using a MUX to mimic the correct function by quantifying and satisfying specific variables.
+BDDs and Negation Arcs:
+
+kbdd uses a concept called "negation arcs," where an edge leaving a BDD node represents an inverted function, which optimizes node usage by about half.
+The document explains how to interpret kbdd's output, including variable names, node memory addresses, and inversion bubbles (denoted by !).
+Advanced Usage and Syntax:
+
+The document covers syntax nuances, such as handling n-bit adders, interpreting printed BDDs, and using range notations for variable declarations.
+An example of a straightforward BDD structure without negation arcs is also shown to help users understand variations in BDD representations.
+In summary, the document provides a structured approach to using kbdd for manipulating Boolean functions, offering insights into both basic operations and more complex repairs and optimizations in logic networks. It also provides troubleshooting tips and usage notes, making it a valuable resource for students in VLSI CAD.
+
+
 
