@@ -123,5 +123,112 @@ DIMACS Format:
 The DIMACS format starts with comments (lines beginning with "c") and a problem line (starting with "p cnf") specifying the number of variables and clauses.
 Each clause is a line of integers: positive numbers represent uncomplemented variables (e.g., 2 for $x_2$ ), and negative numbers represent complemented variables (e.g., -3 for - $x_3$ ). Each clause line ends with a 0.
 
+Example - Simple SAT Problem:
+
+The tutorial provides an example of a small CNF problem to demonstrate how to format it for MiniSat and interpret the results.
+For instance, the CNF formula ($x_1$ + - $x_3$) ($x_2$ +$x_3$ + - $x_1$) is converted into DIMACS format and input to MiniSat. MiniSat outputs both problem statistics and a SAT or UNSAT answer, including a satisfying assignment if it exists.
+
+Advanced Example - Circuit Comparison:
+
+A more complex example shows how MiniSat can check the equivalence of two logic networks by connecting their outputs with an XOR gate. If the XOR output can be set to 1, the circuits are not equivalent.
+The example converts the circuit to CNF format and uses MiniSat to check satisfiability. If MiniSat finds a satisfying assignment, it means there exists an input that produces different outputs for the two circuits.
+
+Understanding MiniSat Output:
+MiniSat outputs statistics about the internal SAT-solving process, such as the number of conflicts, decisions, and propagations it encountered during the search.
+The result section provides the SAT/UNSAT outcome and a variable assignment (e.g., -1 2 -3 0), where positive numbers indicate true values and negative numbers indicate false values in the satisfying assignment.
+
+Handling NaN in MiniSat Output:
+Occasionally, MiniSat may output "nan" (Not-a-Number) in statistics. This typically happens due to division by zero, for instance, when there are zero conflict literals, or when system time measurements are too small to register accurately.
+
+Summary
+The MiniSat tutorial introduces students to setting up and solving SAT problems using DIMACS format, interpreting MiniSat’s output, and understanding how it can be applied in VLSI CAD to verify circuit logic and detect non-equivalence in logic designs. This hands-on guide supports the use of MiniSat in practical scenarios within digital circuit verification and logic synthesis.
+
+
+[espresso-tutorial.pdf](https://github.com/user-attachments/files/17691983/espresso-tutorial.pdf)
+
+This document is a tutorial on using ESPRESSO, a logic minimization tool for optimizing two-level Boolean logic expressions. Developed at the University of California, Berkeley, ESPRESSO is widely used in VLSI CAD for optimizing logic circuits by reducing the number of terms and literals, thus simplifying circuit design and improving efficiency.
+
+Key Highlights of the Tutorial
+Introduction to ESPRESSO:
+
+ESPRESSO is a tool for optimizing two-level (AND-OR) logic expressions. It uses a heuristic called "reduce-expand-irredundant" to minimize the logic, a method that has influenced many modern logic synthesis tools.
+This tutorial focuses on running ESPRESSO in its standard mode to simplify Boolean functions without needing to explore advanced options.
+Input File Format:
+
+ESPRESSO accepts input files in a specific format:
+.i [d]: Specifies the number of input variables.
+
+.o [d]: Specifies the number of output functions.
+
+.ilb and .ob: Used to label inputs and outputs.
+
+Each line in the file represents a term in the truth table, where - indicates a “don’t care” input, 0 indicates a complemented variable, and 1 indicates an uncomplemented variable.
+
+Optimization Example:
+
+The document provides an example of a simple logic function with four inputs and one output:
+
+```
+.i 4
+.o 1
+.ilb w x y z
+.ob f
+0-11   1
+01-1   1
+1011   1
+1111   -
+```
+In this example, running ESPRESSO produces an optimized output with fewer terms. For instance:
+
+```
+--11   1
+01-1   1
+```
+This indicates the minimized expression 
+𝑓=𝑦𝑧+𝑤′𝑥𝑧, reducing the circuit complexity.
+
+Logic Minimization Techniques:
+
+The document discusses ESPRESSO's ability to work with ON-sets, OFF-sets, and DC-sets:
+
+ON-set: Terms where the function outputs 1.
+
+OFF-set: Terms where the function outputs 0.
+
+DC-set (Don’t Care): Terms where the function’s output does not affect the circuit's behavior.
+
+Various .type keywords (f, fd, fr, fdr) allow users to specify how ESPRESSO should handle these sets, optimizing the function by possibly including don’t-care terms to reduce overall complexity.
+
+Symbols in ESPRESSO:
+
+Symbols used in the input matrix:
+
+1 denotes an active variable in a product term.
+
+0 denotes a complemented variable.
+
+- indicates the variable does not appear in the term.
+  
+Multiple-valued logic is also supported, allowing variables to have more than two states.
+
+Advanced Usage and Examples:
+
+The document provides examples with varying complexities, including:
+
+Two-bit adder: Defines a truth table for adding two 2-bit numbers.
+
+Multiple-valued functions: Demonstrates optimization of functions with multi-state variables.
+
+KISS-style encoding: Encodes finite state machines (FSMs) with symbolic states, useful for state encoding in digital design.
+
+Applications:
+
+ESPRESSO is suitable for simplifying large Boolean functions with multiple variables, outputs, and states, making it highly applicable in designing simplified and cost-effective logic circuits in digital hardware.
+
+Summary
+
+This tutorial offers an in-depth guide on using ESPRESSO for Boolean logic minimization, providing examples, syntax, and options for optimizing both simple and complex logic functions in digital circuit design.
+
+
 
 
