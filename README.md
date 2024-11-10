@@ -109,5 +109,19 @@ The document covers syntax nuances, such as handling n-bit adders, interpreting 
 An example of a straightforward BDD structure without negation arcs is also shown to help users understand variations in BDD representations.
 In summary, the document provides a structured approach to using kbdd for manipulating Boolean functions, offering insights into both basic operations and more complex repairs and optimizations in logic networks. It also provides troubleshooting tips and usage notes, making it a valuable resource for students in VLSI CAD.
 
+[minisat-tutorial.pdf](https://github.com/user-attachments/files/17691930/minisat-tutorial.pdf)
+
+This document is a tutorial on using MiniSat, a SAT (Satisfiability) solver developed by Niklas Eén and Niklas Sörensson. The MiniSat tool is an essential part of VLSI CAD for verifying the correctness of digital logic designs. The tutorial is designed to help students use MiniSat to solve Boolean satisfiability problems, especially in the context of logic circuit verification.
+
+Key Highlights of the Tutorial
+Introduction to MiniSat:
+
+MiniSat is a compact and efficient SAT solver, commonly used for VLSI CAD and various other fields. It checks if there exists an assignment of variables that satisfies a Boolean formula expressed in Conjunctive Normal Form (CNF).
+The document highlights that MiniSat uses a common input format called DIMACS, which is a standard for expressing SAT problems.
+DIMACS Format:
+
+The DIMACS format starts with comments (lines beginning with "c") and a problem line (starting with "p cnf") specifying the number of variables and clauses.
+Each clause is a line of integers: positive numbers represent uncomplemented variables (e.g., 2 for $x_2$ ), and negative numbers represent complemented variables (e.g., -3 for -$x_3$ ). Each clause line ends with a 0.
+
 
 
