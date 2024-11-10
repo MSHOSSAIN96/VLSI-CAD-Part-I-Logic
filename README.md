@@ -121,7 +121,7 @@ The document highlights that MiniSat uses a common input format called DIMACS, w
 DIMACS Format:
 
 The DIMACS format starts with comments (lines beginning with "c") and a problem line (starting with "p cnf") specifying the number of variables and clauses.
-Each clause is a line of integers: positive numbers represent uncomplemented variables (e.g., 2 for $x_2$ ), and negative numbers represent complemented variables (e.g., -3 for -$x_3$ ). Each clause line ends with a 0.
+Each clause is a line of integers: positive numbers represent uncomplemented variables (e.g., 2 for $x_2$ ), and negative numbers represent complemented variables (e.g., -3 for - $x_3$ ). Each clause line ends with a 0.
 
 
 
